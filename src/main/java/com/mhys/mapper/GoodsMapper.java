@@ -1,7 +1,6 @@
 package com.mhys.mapper;
 
 import com.mhys.model.Goods;
-import com.mhys.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
