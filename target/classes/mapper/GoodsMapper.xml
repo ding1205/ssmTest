@@ -4,7 +4,24 @@
  <select id="selectAll" resultType="com.mhys.model.Goods">
         select * from goods
     </select>
- <delete id="del" parameterType="java.lang.Integer">
-        delete from goods WHERE gid=#{gid}
+    <select id="selectName" parameterType="com.mhys.model.Goods" resultType="com.mhys.model.Goods">
+        select * from goods where 1=1
+        <if test="#{goodsName!=null and goodsName!=''}">
+            and  goodsName like '%${goodsName}%'
+        </if>
+    </select>
+   <delete id="del" parameterType="java.lang.Integer">
+        delete from goods WHERE id=#{id}
     </delete>
+    <insert id="insertGoods" parameterType="com.mhys.model.Goods">
+        insert into goods(goodsName,goodsPrice) values(#{goodsName},#{goodsPrice})
+    </insert>
+
+    <select id="selectId" parameterType="com.mhys.model.Goods" resultType="com.mhys.model.Goods">
+        select id,goodsName,goodsPrice from goods where id=#{id}
+    </select>
+
+    <update id="updateId" parameterType="com.mhys.model.Goods">
+        update goods set goodsName=#{goodsName},goodsPrice=#{goodsPrice} where id=#{id}
+    </update>
 </mapper>

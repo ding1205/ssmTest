@@ -13,6 +13,11 @@
     <title>Title</title>
 </head>
 <body>
+<a href="test.jsp">新增</a>
+<form method="post" method="/selectName">
+    <input placeholder="请输入姓名" name="goodsName">
+    <input type="submit">
+</form>
 <table>
     <tr>
         <th>商品名</th>
@@ -24,7 +29,8 @@
         <tr>
             <td>${row.goodsName}</td>
             <td>${row.goodsPrice}</td>
-           <td><a href="./del?gid=${row.gid}">删除</a></td>
+           <td><a href="./del?id=${row.id}">删除</a></td>
+            <td><a href="selectGoods?id=${row.id}">修改</a></td>
         </tr>
     </c:forEach>
 </table>

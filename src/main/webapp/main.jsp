@@ -28,7 +28,7 @@
             <td>${row.username}</td>
             <td>${row.password}</td>
             <td><a href="./delById?id=${row.id}">删除</a></td>
-            <td><a href="selectByID?id=${row.id}">修改</a></td>
+                     <td><a href="selectByID?id=${row.id}">修改</a></td>
 
         </tr>
     </c:forEach>
