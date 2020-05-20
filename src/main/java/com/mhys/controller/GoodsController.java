@@ -1,7 +1,4 @@
 package com.mhys.controller;
-
-
-
 import com.mhys.model.Goods;
 import com.mhys.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
